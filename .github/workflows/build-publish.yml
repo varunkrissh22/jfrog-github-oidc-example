@@ -13,7 +13,7 @@ jobs:
      env:
       OIDC_AUDIENCE: 'jfrog-github'
       OIDC_PROVIDER: 'github'
-      PLATFORM_REPO: 'training-repo-npm'
+      PLATFORM_REPO: 'training--virtual-repo-npm'
      defaults:
       run:
         working-directory: ./package
