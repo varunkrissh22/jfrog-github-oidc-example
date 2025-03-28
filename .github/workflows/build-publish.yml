@@ -1,4 +1,5 @@
-name: "JFrog-GitHub NPM Publish OIDC Integration"
+# Github Workflow to Show the Github OIDC Integration with JFrog
+name: "JFrog-GitHub OIDC Integration"
 on: push
 
 # This is required as per
@@ -28,7 +29,6 @@ jobs:
          uses: jfrog/setup-jfrog-cli@v4
          env:  
            JF_URL: ${{ vars.JF_URL }}
-         #  JF_GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
          with:
            oidc-provider-name: ${{ env.OIDC_PROVIDER }}
            oidc-audience: ${{ env.OIDC_AUDIENCE }}
