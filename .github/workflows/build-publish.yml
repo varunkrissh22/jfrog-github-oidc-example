@@ -27,7 +27,8 @@ jobs:
        - name: Setup JFrog CLI
          uses: jfrog/setup-jfrog-cli@v3
          env:  
-           JF_URL: ${{ secrets.JF_URL }}
+           JF_URL: ${{ variables.JF_URL }}
+           JF_GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
          with:
            oidc-provider-name: ${{ env.OIDC_PROVIDER }}
            oidc-audience: ${{ env.OIDC_AUDIENCE }}
