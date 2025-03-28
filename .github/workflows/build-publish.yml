@@ -14,6 +14,9 @@ jobs:
      env:
       OIDC_AUDIENCE: 'jfrog-github'
       OIDC_PROVIDER: 'github'
+      # Prerequisite Reposiroty Settings in UI: 'training-virtual-repo-npm' used as PLATFORM_REPO, is a virtual repository. This Virtual Repository, 
+      # consists of a local npm repository to upload the artifact '' and a remote npm repo " to resolve build dependecies. 
+      #The Default Deployment Repository Setting, inside the Virtual Repo is set to Local Repo ''
       PLATFORM_REPO: 'training-virtual-repo-npm'
      defaults:
       run:
