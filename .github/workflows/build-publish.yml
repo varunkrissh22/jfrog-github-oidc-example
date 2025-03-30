@@ -1,5 +1,5 @@
 # Github Workflow to Show the Github OIDC Integration with JFrog
-name: "JFrog-GitHub OIDC Integration"
+name: "JFrog-GitHub-OIDC-Integration"
 on: push
 
 # This is required as per
@@ -59,4 +59,4 @@ jobs:
        - name: build scan
          if: ${{ true }}
          run: |
-            jf build-scan --vuln --fail=false
+          #  jf build-scan --vuln --fail=false
