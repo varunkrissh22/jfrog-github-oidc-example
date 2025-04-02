@@ -65,7 +65,7 @@ jobs:
              echo true
              jf build-scan --vuln --fail=false
           else
-             echo true
+             echo false
              jf build-scan --fail=false
           fi
           env:
