@@ -60,6 +60,12 @@ jobs:
           # Publish build info
           jf rt build-publish
        - name: build scan
-         if: ${{ true }}
          run: |
-            jf build-scan --vuln --fail=false
+          if [ "${{ env.ENABLE_VULN_SCAN }}" == "true" ]; then
+             jf build-scan --vuln
+          else
+             jf build-scan
+          fi
+          env:
+          ENABLE_VULN_SCAN: false  # Set to true when needed
+
