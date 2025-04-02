@@ -62,8 +62,10 @@ jobs:
        - name: build scan
          run: |
           if [ "${{ env.ENABLE_VULN_SCAN }}" == "true" ]; then
+             echo true
              jf build-scan --vuln --fail=false
           else
+             echo true
              jf build-scan --fail=false
           fi
           env:
