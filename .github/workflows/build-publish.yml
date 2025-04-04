@@ -61,6 +61,6 @@ jobs:
           jf rt build-publish
        
        - name: build scan
-         if: ${{ false }}
+         if: ${{ true }}
          run: |
             jf build-scan --vuln --fail=false
