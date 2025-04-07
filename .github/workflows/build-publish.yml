@@ -59,7 +59,11 @@ jobs:
           jf rt build-add-git
           # Publish build info
           jf rt build-publish
-       
+      #Adding a Delay for the Xray Security Scan for the Builds.
+       - name: Sleep for 60 seconds
+         uses: jakejarvis/wait-action@master
+         with:
+           time: '60s'
        - name: build scan
          if: ${{ true }}
          run: |
