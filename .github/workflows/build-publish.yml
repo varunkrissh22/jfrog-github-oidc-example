@@ -72,7 +72,7 @@ jobs:
        - name: Set SARIF file path
          run: echo "SARIF_FILE_PATH=$(pwd)/jfrog_sast.sarif" >> $GITHUB_ENV
 
-       - name: Upload output to generate autofix
+       - name: Upload output to github advanced security
          uses: github/codeql-action/upload-sarif@v3
          with:
           sarif_file: ${{ env.SARIF_FILE_PATH }}
