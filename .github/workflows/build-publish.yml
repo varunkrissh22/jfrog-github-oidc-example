@@ -64,7 +64,8 @@ jobs:
          uses: jakejarvis/wait-action@master
          with:
            time: '60s'
-      
+      #Steps Below are to Perform Security Scans and Upload Results to Github Advanced Security. This process invokes JFrog xray to 
+      #perform the scanning.
        - name: Run JFrog SAST
          run: |
            jf audit --sca --format=sarif > jfrog_sast.sarif
